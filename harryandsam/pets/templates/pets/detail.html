@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>{{object.image}} </p>
+<p>Name: {{object.name}} </p>
+<p>Type: {{object.pet_type}} </p>
+{% if object.breed %}
+  <p>Breed: {{object.breed}} </p>
+{% else %}
+  <p>Breed: Unlisted</p>
+{% endif %}
+<p>Sex: {{object.gender}} </p>
+{% if son %}
+  <p>Sprayed / Neutered: <img src='https://image.shutterstock.com/image-vector/check-mark-icon-symbol-yes-260nw-608508923.jpg' height=50px; width=50px; </p>
+{% else %}
+  <p>Sprayed / Neutered: <img src='https://s.pngix.com/pngfile/s/47-477794_small-x-checkbox-png-transparent-png.png' height="50px;" width="50px;"> </p>
+<p>Weight: {{object.weight}} </p>
+<p>Coat Colour: {{object.coat}} </p>
+<p>Birthday: {{object.birthday}} </p>
+<p>Allergie Notes: {{object.allergies_notes}} </p>
+<p>Name: {{object.name}} </p>
+<p>Name: {{object.name}} </p>
+<p>Name: {{object.name}} </p>
+<p>Name: {{object.name}} </p>
+<p>Name: {{object.name}} </p>
+<p>Name: {{object.name}} </p>
+
+{% endblock %}
