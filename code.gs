@@ -8,7 +8,7 @@ var lastRow = sheet.getLastRow();
 var lastColumn = sheet.getLastColumn();
 
 // H&S calendar grabbed by ID
-var calendar = CalendarApp.getCalendarById('asgg4s4trl3sdo7rj22d6gh0k4@group.calendar.google.com');
+var calendar = CalendarApp.getCalendarById('//INSERT YOUR CALANDAR LINK HERE');
 
 // Creates an object from the last form submission
 function Submission(row){
@@ -67,7 +67,7 @@ function getChangeIndex(statusChange){
 
 // Drafts contents for emails depending on needed message
 function draftEmail(request){
-  request.buttonLink = "https://docs.google.com/forms/d/e/1FAIpQLScpUn3NPwJpJQd2jJFU78NCjVV-MbNhS3WUrTUkqB7phxi6Ig/viewform?usp=sf_link"
+  request.buttonLink = "INSERT YOUR RMAILINSERT YOUR BUTTON LINK ";
   request.buttonText = "New Request";
   switch (request.status) {
     case "New":
@@ -76,12 +76,11 @@ function draftEmail(request){
       request.message = "Once the request has been reviewed you will receive an email updating you on it.";
       break;
     case "New2":
-      request.email = "harryandsam.booking@gmail.com";
+      request.email = "INSERT YOUR EAMIL HERE ";
       request.subject = "New Request for " + request.dateString;
       request.header = "Request Received";
       request.message = "A new request needs to be reviewed.";
-      request.buttonLink = 
-"https://docs.google.com/spreadsheets/d/19jQM-5yH0zyZYeLz2VzbAGust8iUNtsHndSsbsdQsIo/edit?usp=sharing";
+      request.buttonLink = "INSERT YOUR BUTTON LINK HERE";
       request.buttonText = "View Request";
       break;
     case "Approve":
